@@ -8,12 +8,113 @@
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
 }
-
-
+section{
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  height: 60vh;
+  background-image: url(/images/pattern-bg.svg), url(/images/pattern-curve.svg);
+  background-size: contain, 50% auto;
+  background-repeat: no-repeat;
+  background-position: bottom right, bottom left;
+  position: relative;
+}
+section .one{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+section .two{
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+section .left{
+  z-index: 10;
+  margin-right: -40px;
+}
+section .one .left .comment, section .two .left .comment{
+  font-size: 19px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: hsl(240, 38%, 20%);
+}
+section .one .left .name, section .two .left .name{
+  font-weight: 700;
+  font-size: 13px;
+  color: hsl(240, 38%, 20%);
+}
+section .one .left .name span, section .two .left .name span{
+  color: hsl(240, 18%, 77%);
+}
+section .one .right{
+  height: 100%;
+  width: 100%;
+  background: url(/images/image-tanya.jpg) no-repeat;
+  background-size: contain;
+  z-index: 5;
+}
+section .two .right{
+  height: 100%;
+  width: 100%;
+  background: url(/images/image-john.jpg) no-repeat;
+  background-size: contain;
+  z-index: 5;
+}
+.btn-container{
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  right: 35%;
+  bottom: 30px;
+  cursor: pointer;
+}
+.btn-container .prev{
+  padding: 6px 12px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border: none;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px hsl(240, 18%, 77%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.prev img, .next img{
+  height: 15px;
+}
+.btn-container .next{
+  padding: 6px 12px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: none;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px hsl(240, 18%, 77%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 .attribution { 
   font-size: 11px; 
   text-align: center; 
 }
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+@media (width <= 375px){
+  section .one{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section .one .right{
+    width: 100%;
+  }
 }
