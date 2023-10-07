@@ -98,3 +98,43 @@ section{
 .attribution{
   text-align: center;
 }
+
+@media (width <= 375px){
+  section{
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    width: 100%;
+    background-size: 70% auto;
+  }
+  .one, .two{
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .left{
+    width: 80%;
+    margin-right: 0;
+  }
+  .one .right, .two .right{ 
+    width: 80%;
+    margin-bottom: 30px;
+    height: 250px;
+  }
+  .comment{
+    text-align: center;
+    font-size: 15px;
+  }
+  .name{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .btn-container{
+    bottom: 42%;
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
+}
